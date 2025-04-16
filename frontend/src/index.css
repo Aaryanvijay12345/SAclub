@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@keyframes float {
+  0% {
+    transform: translateY(0px) rotate(0deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(0px) rotate(360deg);
+    opacity: 0.8;
+  }
+}
+
+.floating-shape {
+  animation: float 15s infinite ease-in-out;
+}
+
+.floating-shape:nth-child(2n) {
+  animation-duration: 20s;
+  animation-delay: -5s;
+}
+
+.floating-shape:nth-child(3n) {
+  animation-duration: 25s;
+  animation-delay: -10s;
+}
+
+.floating-shape:nth-child(4n) {
+  animation-duration: 30s;
+  animation-delay: -15s;
+}
+
+/* In your global CSS */
+.after-navbar {
+  padding-top: 7rem; /* or 6rem depending on your navbar height */
+}
+/* in your global CSS (if any) */
+.navbar-height {
+  height: 80px; /* or however tall your navbar is */
+}
+
