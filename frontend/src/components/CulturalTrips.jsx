@@ -207,6 +207,11 @@ const CulturalTrips = () => {
   const [puriDetails, setPuriDetails] = useState([]);
   const [activeTrip, setActiveTrip] = useState(null);
 
+  // Lightbox state
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [lightboxImages, setLightboxImages] = useState([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
+
   useEffect(() => {
     axios.get(`${BASE_URL}/api/trips`).then((res) => setCulturalTrips(res.data));
   }, []);
@@ -226,6 +231,26 @@ const CulturalTrips = () => {
     }
   };
 
+  const openLightbox = (images, index) => {
+    setLightboxImages(images);
+    setCurrentIndex(index);
+    setLightboxOpen(true);
+  };
+
+  const closeLightbox = () => {
+    setLightboxOpen(false);
+  };
+
+  const goToNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % lightboxImages.length);
+  };
+
+  const goToPrev = () => {
+    setCurrentIndex((prevIndex) =>
+      (prevIndex - 1 + lightboxImages.length) % lightboxImages.length
+    );
+  };
+
   const TripDetailCard = ({ title, details }) => (
     <div className="mt-12 animate-fade-in transition-all duration-700 ease-in-out">
       <div className="bg-white/30 border border-white/50 backdrop-blur-lg rounded-2xl p-6 shadow-2xl">
@@ -238,7 +263,12 @@ const CulturalTrips = () => {
               key={idx}
               className="bg-white/70 rounded-xl overflow-hidden shadow-lg"
             >
-              <div className="overflow-hidden">
+              <div className="overflow-hidden cursor-pointer" onClick={() =>
+                openLightbox(
+                  details.map((d) => `${BASE_URL}/assets/${d.image}`),
+                  idx
+                )
+              }>
                 <img
                   src={`${BASE_URL}/assets/${spot.image}`}
                   alt="Trip view"
@@ -298,6 +328,50 @@ const CulturalTrips = () => {
           )}
         </div>
       </div>
+
+      {lightboxOpen && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-90 flex items-center justify-center z-50"
+          onClick={closeLightbox}
+        >
+          <div className="relative w-full h-full flex items-center justify-center">
+            <img
+              src={lightboxImages[currentIndex]}
+              alt="Fullscreen view"
+              className="max-w-4xl max-h-[90vh] rounded-xl shadow-lg"
+              onClick={(e) => e.stopPropagation()}
+            />
+            <button
+              className="absolute left-10 text-white text-3xl font-bold"
+              onClick={(e) => {
+                e.stopPropagation();
+                goToPrev();
+              }}
+            >
+              ‹
+            </button>
+            <button
+              className="absolute right-10 text-white text-3xl font-bold"
+              onClick={(e) => {
+                e.stopPropagation();
+                goToNext();
+              }}
+            >
+              ›
+            </button>
+            <button
+              className="absolute top-6 right-6 text-white text-2xl"
+              onClick={(e) => {
+                e.stopPropagation();
+                closeLightbox();
+              }}
+            >
+              ✕
+            </button>
+          </div>
+        </div>
+      )}
+
       <Contact />
     </>
   );

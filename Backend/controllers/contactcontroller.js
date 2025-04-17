@@ -1,4 +1,4 @@
-const transporter = require('../config/nodemailer');
+const transporter = require('../config/transporter');
 
 const sendContactForm = async (req, res) => {
   const { name, email, message } = req.body;

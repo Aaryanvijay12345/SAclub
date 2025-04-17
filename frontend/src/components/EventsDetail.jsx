@@ -8,9 +8,13 @@ import { useInView } from 'react-intersection-observer';
 
 
 // Images
-import janmashtami1 from '../assets/janmashtami1.png';
-import janmashtami2 from '../assets/janmashtami2.png';
-import janmashtami3 from '../assets/janmashtami3.png';
+import janmasthami01 from '../assets/janmasthami/janmasthami01.png';
+import janmasthami02 from '../assets/janmasthami/janmasthami02.png';
+import janmasthami03 from '../assets/janmasthami/janmasthami03.png';
+import janmasthami04 from '../assets/janmasthami/janmasthami04.png';
+import janmasthami05 from '../assets/janmasthami/janmasthami05.png';
+
+
 
 import ram1 from '../assets/ram1.png';
 import ram2 from '../assets/ram2.png';
@@ -33,7 +37,7 @@ const EventsDetail = () => {
       title: '🕉 Krishna Janmashtami',
       date: '6 Sept 2023',
       strength: '100+',
-      images: [janmashtami1, janmashtami2, janmashtami3],
+      images: [janmasthami01, janmasthami02, janmasthami03, janmasthami04, janmasthami05,],
       points: ['Lamp Lighting', 'Abhishekam', 'Deep Dan', 'Bhajan Sankirtan', 'Prasadam'],
     },
     {

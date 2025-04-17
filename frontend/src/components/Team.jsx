@@ -3,7 +3,7 @@ import coordinatorImg from '../assets/coordinatorImg.png';
 import clubSecretary from '../assets/clubSecretary.png';
 import Navbar from './Navbar';
 import { motion, useInView } from 'framer-motion';
-import eventBg from '../assets/eventbg.png';
+import culturalBg from '../assets/culturalBg.png';
 import { coreTeamData } from '../data/coreTeamData'; // Adjust path as needed
 import { AnimatePresence } from 'framer-motion';
 import Contact from './Contact';
@@ -61,7 +61,7 @@ const openModal = () => {
         <div
         className="pt-[100px] px-6 md:px-10 min-h-screen pb-20 bg-cover bg-center bg-no-repeat text-white space-y-20"
         style={{
-          backgroundImage: `url(${eventBg})`,
+          backgroundImage: `url(${culturalBg})`,
           backgroundBlendMode: "overlay",
         }}
       >

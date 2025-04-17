@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 const memberRoutes = require('./routes/memberRoutes');
 const culturalRoutes = require('./routes/culturalTrips');
+const contactRoute = require('./routes/contact');
+
 
 const app = express();
 app.use(cors());
@@ -20,6 +22,9 @@ mongoose.connect(process.env.MONGO_URI)
 app.use('/api/members', memberRoutes);
 // Mount the trip routes
 app.use('/api', culturalRoutes);
+
+app.use('/api', contactRoute);
+
 
 
 const PORT = process.env.PORT || 5000;
