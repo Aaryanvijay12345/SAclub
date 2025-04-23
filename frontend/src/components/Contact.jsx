@@ -191,36 +191,31 @@ const Contact = () => {
               <div className="flex items-center">
                 <MapPin className="h-6 w-6 text-purple-600 mr-4" />
                 <span className="text-gray-600">
-                  RTU, Akelgarh, Kota, 324010
+                  Rajasthan Technical University, Kota(Rajasthan), 324010
                 </span>
               </div>
             </div>
+            <div className="mt-8 text-center text-purple-700 font-semibold text-xl">
+              Follow Us On
+            </div>
 
-            <div className="flex items-center space-x-6 mt-8">
+            <div className="flex justify-center space-x-6 mt-8">
               <a
                 href="https://www.instagram.com/spiritualclub_official/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Instagram className="h-6 w-6 text-purple-600 hover:text-purple-800 transition duration-300" />
+                <Instagram className="h-8 w-8 text-purple-600 hover:text-purple-800 transition duration-300" />
               </a>
               <a
                 href="https://www.youtube.com/channel/UCOpTMKny1TmYdUkmnTWTWxA"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Youtube className="h-6 w-6 text-purple-600 hover:text-purple-800 transition duration-300" />
+                <Youtube className="h-8 w-8 text-purple-600 hover:text-purple-800 transition duration-300" />
               </a>
-              <a
-                href="https://www.facebook.com/spiritualclubofficial"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Facebook className="h-6 w-6 text-purple-600 hover:text-purple-800 transition duration-300" />
-              </a>
+              
             </div>
-
-           
           </div>
 
           <form className="space-y-6" onSubmit={handleSubmit}>
@@ -288,21 +283,16 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="mt-8 text-center text-purple-700 font-semibold text-lg">
-              Hare Krishna🙏
-            </div>
-      
-        {/* Copyright */}
-        <div className="mt-16 text-center text-gray-500 text-sm">
-        &copy; {new Date().getFullYear()} Spiritual Activity Club. All rights reserved.
+      <div className="mt-8 text-center text-purple-700 font-semibold text-4xl">
+        Hare Krishna🙏
       </div>
 
-     
-
-      
+      {/* Copyright */}
+      <div className="mt-16 text-center text-gray-500 text-sm">
+        &copy; {new Date().getFullYear()} Spiritual Activity Club. All rights
+        reserved.
+      </div>
     </div>
-
-    
   );
 };
 

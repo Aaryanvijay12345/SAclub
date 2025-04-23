@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import alumni1 from '../assets/alumni1.png';
 import alumni2 from '../assets/alumni2.png';
@@ -67,6 +67,10 @@ const alumniData = [
 ];
 
 const Alumni = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
       <section

@@ -52,7 +52,7 @@ useEffect(() => {
           {/* Logo */}
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
-              <img src={logo} alt="Logo" className="h-10 w-12" />
+              <img src={logo} alt="Logo" className="h-12 w-14" />
               <span className="ml-2 text-xl font-semibold text-gray-800">
                 Spiritual Activity Club
               </span>

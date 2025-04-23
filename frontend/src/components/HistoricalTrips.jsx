@@ -8,6 +8,14 @@ import Contact from "../components/Contact";
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { AiOutlineClose } from "react-icons/ai";
 
+import chittorgarh1 from "../assets/chittorgarh/chittorgarh1.jpg";
+import chittorgarh2 from "../assets/chittorgarh/chittorgarh2.jpg";
+import chittorgarh3 from "../assets/chittorgarh/chittorgarh3.jpg";
+import chittorgarh4 from "../assets/chittorgarh/chittorgarh4.jpg";
+import chittorgarh5 from "../assets/chittorgarh/chittorgarh5.jpg";
+import chittorgarh6 from "../assets/chittorgarh/chittorgarh6.jpg";
+import chittorgarh7 from "../assets/chittorgarh/chittorgarh7.jpg";
+
 const trips = [
   {
     title: "Chittorgarh Fort",
@@ -31,55 +39,55 @@ const trips = [
 
 const chittorgarhDetails = [
   {
-    image: tripBg,
+    image: chittorgarh1,
     description: "The majestic Chittorgarh Fort, symbol of Rajput valor.",
   },
   {
-    image: tripBg,
+    image: chittorgarh2,
     description:
       "Vijay Stambh – the Tower of Victory, standing tall and proud.",
   },
   {
-    image: tripBg,
+    image: chittorgarh3,
     description: "Padmini Palace – a tale of honor and courage.",
   },
   {
-    image: tripBg,
+    image: chittorgarh4,
     description: "The majestic Chittorgarh Fort, symbol of Rajput valor.",
   },
   {
-    image: tripBg,
+    image: chittorgarh4,
     description:
       "Vijay Stambh – the Tower of Victory, standing tall and proud.",
   },
   {
-    image: tripBg,
+    image: chittorgarh5,
     description: "Padmini Palace – a tale of honor and courage.",
   },
   {
-    image: tripBg,
+    image: chittorgarh6,
     description: "The majestic Chittorgarh Fort, symbol of Rajput valor.",
   },
   {
-    image: tripBg,
+    image: chittorgarh7,
     description:
       "Vijay Stambh – the Tower of Victory, standing tall and proud.",
   },
   {
-    image: tripBg,
+    image: chittorgarh1,
     description: "Padmini Palace – a tale of honor and courage.",
   },
   {
-    image: tripBg,
+    image: chittorgarh1,
     description: "The majestic Chittorgarh Fort, symbol of Rajput valor.",
   },
   {
-    image: tripBg,
+    image: chittorgarh1,
     description:
       "Vijay Stambh – the Tower of Victory, standing tall and proud.",
   },
   {
-    image: tripBg,
+    image: chittorgarh1,
     description: "Padmini Palace – a tale of honor and courage.",
   },
 ];

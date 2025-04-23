@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import coordinatorImg from '../assets/coordinatorImg.png';
 import clubSecretary from '../assets/clubSecretary.png';
 import Navbar from './Navbar';
@@ -11,6 +11,10 @@ import Contact from './Contact';
 
 
 const Team = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
 
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [showMoreModal, setShowMoreModal] = useState(false);
