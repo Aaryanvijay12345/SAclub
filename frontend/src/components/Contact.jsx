@@ -149,7 +149,6 @@ const Contact = () => {
       const data = await res.json();
 
       if (res.ok) {
-        setStatus("Message Received! We’ll get back to you shortly.");
         setFormData({ name: "", email: "", message: "" });
       } else {
         setStatus(data.message || "Something went wrong.");

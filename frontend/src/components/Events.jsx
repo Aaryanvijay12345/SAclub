@@ -123,7 +123,7 @@ import {
 import { Link } from 'react-router-dom';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import backgroundImg from '../assets/eventbg.png';
+import culturalBg from '../assets/culturalBg.png';
 
 const eventsData = [
   {
@@ -174,7 +174,7 @@ const Events = () => {
       id="events"
       className="relative py-24 px-4 md:px-16 text-white"
       style={{
-        backgroundImage: `url(${backgroundImg})`,
+        backgroundImage: `url(${culturalBg})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundAttachment: 'fixed'
