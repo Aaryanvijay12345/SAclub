@@ -20,11 +20,11 @@ import ram1 from '../assets/ram1.png';
 import ram2 from '../assets/ram2.png';
 import ram3 from '../assets/ram3.png';
 
-import ramPratishta1 from '../assets/rampratishta1.png';
-import ramPratishta2 from '../assets/rampratishta2.png';
-import ramPratishta3 from '../assets/rampratishta3.png';
-import ramPratishta4 from '../assets/rampratishta4.png';
-import ramPratishta5 from '../assets/rampratishta5.png';
+import ramPratishta1 from '../assets/ramPratishta1.png';
+import ramPratishta2 from '../assets/ramPratishta2.png';
+import ramPratishta3 from '../assets/ramPratishta3.png';
+import ramPratishta4 from '../assets/ramPratishta4.png';
+import ramPratishta5 from '../assets/ramPratishta5.png';
 
 
 import Contact from './Contact';
