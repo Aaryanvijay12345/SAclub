@@ -8,15 +8,7 @@ const contactRoute = require('./routes/contact');
 
 const app = express();
 
-// ✅ CORS configuration
-const corsOptions = {
-  origin: ['https://saclub.vercel.app', 'https://sa-club.vercel.app'],
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
-  credentials: true,
-};
-
-app.use(cors(corsOptions));
-app.options('*', cors(corsOptions));
+app.use(cors());
 
 app.use(express.json());
 
