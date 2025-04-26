@@ -34,7 +34,7 @@ const handleChange = (e) => {
 const handleSubmit = async (e) => {
   e.preventDefault();
   try {
-    const response = await fetch('https://sa-club.vercel.app/api/members', {
+    const response = await fetch('https://sa-club.vercel.app/members', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(formData),

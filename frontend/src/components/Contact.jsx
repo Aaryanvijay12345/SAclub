@@ -140,7 +140,7 @@ const Contact = () => {
     e.preventDefault();
 
     try {
-      const res = await fetch("https://sa-club.vercel.app/api/contact", {
+      const res = await fetch("https://sa-club.vercel.app/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),

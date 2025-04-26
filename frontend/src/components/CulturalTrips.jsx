@@ -213,7 +213,7 @@ const CulturalTrips = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    axios.get(`${BASE_URL}/api/trips`).then((res) => setCulturalTrips(res.data));
+    axios.get(`${BASE_URL}/trips`).then((res) => setCulturalTrips(res.data));
   }, []);
 
   const handleCardClick = async (title) => {
@@ -222,10 +222,10 @@ const CulturalTrips = () => {
     } else {
       setActiveTrip(title);
       if (title === 'Vrindavan') {
-        const res = await axios.get(`${BASE_URL}/api/trips/vrindavan`);
+        const res = await axios.get(`${BASE_URL}/trips/vrindavan`);
         setVrindavanDetails(res.data);
       } else if (title === 'Jagannath Puri') {
-        const res = await axios.get(`${BASE_URL}/api/trips/puri`);
+        const res = await axios.get(`${BASE_URL}/trips/puri`);
         setPuriDetails(res.data);
       }
     }
