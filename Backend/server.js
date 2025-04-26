@@ -27,9 +27,9 @@ app.use(express.json());
 app.use('/assets', express.static('assets'));
 
 // ✅ Mount routes
-app.use('/members', memberRoutes);
-app.use('/', culturalRoutes);
-app.use('/', contactRoute);
+app.use('/api/members', memberRoutes);
+app.use('/api', culturalRoutes);
+app.use('/api', contactRoute);
 
 // ✅ Connect to MongoDB only once (Vercel keeps connections alive between calls)
 let isConnected = false;
