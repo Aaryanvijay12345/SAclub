@@ -199,7 +199,7 @@ import Navbar from '../components/Navbar';
 import Contact from '../components/Contact';
 import culturalBg from '../assets/culturalBg.png';
 
-const BASE_URL = 'https://sa-club.vercel.app/';
+const BASE_URL = 'https://sa-club.vercel.app';
 
 const CulturalTrips = () => {
   const [culturalTrips, setCulturalTrips] = useState([]);
