@@ -10,31 +10,39 @@ const app = express();
 
 // ✅ CORS configuration
 const corsOptions = {
-  origin: ['https://saclub.vercel.app'], // Allowed frontend domain
+  origin: ['https://saclub.vercel.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 };
 
 app.use(cors(corsOptions));
-app.options('*', cors(corsOptions)); // Preflight request support
+app.options('*', cors(corsOptions));
 
 app.use(express.json());
 
 // ✅ Serve static images from /assets
 app.use('/assets', express.static('assets'));
 
-// ✅ Connect to MongoDB
-mongoose.connect(process.env.MONGO_URI)
-  .then(() => console.log("MongoDB Connected"))
-  .catch(err => console.error("MongoDB connection error:", err));
-
 // ✅ Mount routes
 app.use('/members', memberRoutes);
 app.use('/', culturalRoutes);
 app.use('/', contactRoute);
 
-// ✅ Start server
-const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
-  console.log(`Server running on port ${PORT}`);
+// ✅ Connect to MongoDB only once (Vercel keeps connections alive between calls)
+let isConnected = false;
+
+async function connectToMongo() {
+  if (isConnected) return;
+  await mongoose.connect(process.env.MONGO_URI);
+  isConnected = true;
+  console.log("MongoDB Connected");
+}
+
+app.use(async (req, res, next) => {
+  await connectToMongo();
+  next();
 });
+
+// ❌ Don't call app.listen()
+// ✅ Instead export as Vercel function handler
+module.exports = app;
