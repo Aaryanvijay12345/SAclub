@@ -10,7 +10,7 @@ const app = express();
 
 // ✅ CORS configuration
 const corsOptions = {
-  origin: ['https://saclub.vercel.app'],
+  origin: ['https://saclub.vercel.app', 'https://sa-club.vercel.app'],
   methods: ['GET', 'POST', 'PUT', 'DELETE'],
   credentials: true,
 };
