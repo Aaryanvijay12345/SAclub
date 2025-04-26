@@ -11,7 +11,7 @@ import alumni8 from '../assets/alumni8.png';
 import alumni9 from '../assets/alumni9.png';
 import alumni10 from '../assets/alumni10.png';
 import Contact from './Contact';
-import eventBg from '../assets/eventbg.png'
+import eventBg from '../assets/eventbg.png';
 
 const alumniData = [
   {
