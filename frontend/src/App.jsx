@@ -13,6 +13,8 @@ import Trips from './components/Trips';
 import HistoricalTrips from './components/HistoricalTrips';
 import CulturalTrips from './components/CulturalTrips';
 import EducationalTrips from './components/EducationalTrips';
+import ContactUs from './components/ContactUs';
+import PrivacyPolicy from './components/PrivacyPolicy';
 
 // import Alumni from './components/Alumni';
 
@@ -30,6 +32,9 @@ function App() {
           <Route path="/historical-trips" element={<HistoricalTrips />} />
         <Route path="/cultural-trips" element={<CulturalTrips />} />
         <Route path="/educational-trips" element={<EducationalTrips />} />
+          <Route path="/privacyPolicy" element={<PrivacyPolicy />} />
+        <Route path="/contactUs" element={<ContactUs />} />
+      
 
 
           <Route path="/" element={

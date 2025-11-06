@@ -137,6 +137,20 @@ useEffect(() => {
                 >
                   Trips
                 </Link>
+                   <Link
+                  to="/privacyPolicy"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 transition-all"
+                >
+                  Privacy Policy
+                </Link>
+                 <Link
+                  to="/contactUs"
+                  onClick={() => setIsOpen(false)}
+                  className="block px-4 py-2 text-sm text-gray-700 hover:bg-purple-50 transition-all"
+                >
+                  Contact Us
+                </Link>
               </div>
             </div>
           </div>
